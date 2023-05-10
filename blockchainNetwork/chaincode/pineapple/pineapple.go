@@ -28,7 +28,7 @@ func (cc *PineappleChaincode) create(stub shim.ChaincodeStubInterface, arg []str
 
 	args := strings.Split(arg[0], "^^")
 
-	if len(args) != 18 {
+	if len(args) != 6 {
 		return shim.Error("Incorrect number arguments. Expecting 6")
 	}
 	dateValue1, err1 := time.Parse(time.RFC3339, args[1])
