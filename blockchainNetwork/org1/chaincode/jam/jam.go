@@ -30,8 +30,8 @@ func (cc *JamChaincode) create(stub shim.ChaincodeStubInterface, arg []string) p
 
 	args := strings.Split(arg[0], "^^")
 
-	if len(args) != 12 {
-		return shim.Error("Incorrect number arguments. Expecting 12")
+	if len(args) != 8 {
+		return shim.Error("Incorrect number arguments. Expecting 8")
 	}
 	dateValue1, err1 := time.Parse(time.RFC3339, args[1])
 
