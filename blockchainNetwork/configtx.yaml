@@ -174,33 +174,49 @@ Profiles:
             Organizations:
             - <<: *orderer
         Consortiums:
-            ConsortiumA:
+            Consortiumcommon:
                 Organizations:
                    - *org1
                    - *org2
-            ConsortiumB:
-                Organizations:
-                   - *org2
                    - *org3
-
-    ChannelA:
-        Consortium: ConsortiumA
+            Consortiumchannela:
+                Organizations:
+                   - *org1
+                   - *org2
+            Consortiumchannelb:
+                Organizations:
+                   - *org3
+                   - *org2
+    common:
+        Consortium: Consortiumcommon
         <<: *ChannelDefaults
         Application:
             <<: *ApplicationDefaults
             Organizations:
-                - *org2
                 - *org1
+                - *org2
+                - *org3
             Capabilities:
                 <<: *ApplicationCapabilities
 
-    ChannelB:
-        Consortium: ConsortiumB
+    channela:
+        Consortium: Consortiumchannela
         <<: *ChannelDefaults
         Application:
             <<: *ApplicationDefaults
             Organizations:
+                - *org1
                 - *org2
+            Capabilities:
+                <<: *ApplicationCapabilities
+            
+    channelb:
+        Consortium: Consortiumchannelb
+        <<: *ChannelDefaults
+        Application:
+            <<: *ApplicationDefaults
+            Organizations:
                 - *org3
+                - *org2
             Capabilities:
                 <<: *ApplicationCapabilities
