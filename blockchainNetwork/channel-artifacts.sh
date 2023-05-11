@@ -8,6 +8,7 @@ configtxgen -profile ChannelB -outputCreateChannelTx ./channel-artifacts/channel
 
 #Anchor Peer of Org1
 
+
 configtxgen -profile ChannelA -outputAnchorPeersUpdate ./channel-artifacts/org1AnchorPeer.tx -channelID channela -asOrg org1MSP
 
 #Anchor peer of Org2
