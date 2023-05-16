@@ -187,17 +187,6 @@ Profiles:
                 Organizations:
                    - *org3
                    - *org2
-    common:
-        Consortium: Consortiumcommon
-        <<: *ChannelDefaults
-        Application:
-            <<: *ApplicationDefaults
-            Organizations:
-                - *org1
-                - *org2
-                - *org3
-            Capabilities:
-                <<: *ApplicationCapabilities
 
     channela:
         Consortium: Consortiumchannela
