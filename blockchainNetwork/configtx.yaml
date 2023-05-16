@@ -186,7 +186,7 @@ Profiles:
             Consortiumchannelb:
                 Organizations:
                    - *org3
-                   - *org2
+                   - *org1
 
     channela:
         Consortium: Consortiumchannela
@@ -206,6 +206,6 @@ Profiles:
             <<: *ApplicationDefaults
             Organizations:
                 - *org3
-                - *org2
+                - *org1
             Capabilities:
                 <<: *ApplicationCapabilities

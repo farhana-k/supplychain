@@ -26,11 +26,11 @@ configtxgen -profile channelb -outputCreateChannelTx ./channel-artifacts/channel
 
 
 #Anchor peer Org1
+configtxgen -profile channelb -outputAnchorPeersUpdate ./channel-artifacts/org1AnchorPeerchannelb.tx -channelID channela -asOrg org1MSP
 configtxgen -profile channela -outputAnchorPeersUpdate ./channel-artifacts/org1AnchorPeerchannela.tx -channelID channela -asOrg org1MSP
 
 #Anchor peer Org2
 configtxgen -profile channela -outputAnchorPeersUpdate ./channel-artifacts/org2AnchorPeerchannela.tx -channelID channela -asOrg org2MSP
-configtxgen -profile channelb -outputAnchorPeersUpdate ./channel-artifacts/org2AnchorPeerchannelb.tx -channelID channela -asOrg org2MSP
 
 
 #Anchor peer Org3
